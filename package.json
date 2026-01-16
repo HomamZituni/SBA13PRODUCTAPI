@@ -1,0 +1,25 @@
+{
+  "name": "zenith-product-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HomamZituni/SBA13PRODUCTAPI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HomamZituni/SBA13PRODUCTAPI/issues"
+  },
+  "homepage": "https://github.com/HomamZituni/SBA13PRODUCTAPI#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.4"
+  }
+}
