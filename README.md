@@ -1,47 +1,48 @@
-Github Repo: https://github.com/HomamZituni/SBA13PRODUCTAPI
-Vercel Repo: https://sba-13-productapi-git-main-homam-zitunis-projects.vercel.app
-Vercel domain to test functionality: https://sba-13-productapi.vercel.app/
+# Zenith Product API 
 
-About this project:
-Full-stack REST API built with Node.js, Express, Mongoose, and MongoDB Atlas. Features complete CRUD operations with advanced filtering, sorting, and pagination.
+**Live API:** https://sba-13-productapi.vercel.app/api/products
 
-Tech Stack: 
+**GitHub:** https://github.com/HomamZituni/SBA13PRODUCTAPI
 
-Node.js + Express → API Framework
-Mongoose → MongoDB ODM
-MongoDB Atlas → Cloud Database
-Vercel → Serverless Hosting
+Full-stack REST API with Node.js, Express, Mongoose, MongoDB Atlas. Complete CRUD + advanced filtering, sorting, pagination.
 
-How to Test:
+## Tech Stack
+Node.js + Express -> API Framework
+Mongoose -> MongoDB ODM
+MongoDB Atlas -> Cloud Database
+Vercel -> Serverless Hosting
 
-1. POST /api/products(Create)- Status 201
+
+## Test Instructions (Postman Required)
+
+### 1. Create Product (201)
 POST https://sba-13-productapi.vercel.app/api/products
 Content-Type: application/json
 
 {
-  "name": "Test Laptop",
-  "description": "For testing",
-  "price": 999,
-  "category": "electronics"
+"name": "Test Laptop",
+"description": "For testing",
+"price": 999,
+"category": "electronics"
 }
 
+### 2. Read Single (200/404)
+GET https://sba-13-productapi.vercel.app/api/products/{PASTE_ID_HERE}
 
-2. GET /api/products/:id (Read Single) - Status 200/404
-GET https://sba-13-productapi.vercel.app/api/products/{PASTE_ID_FROM_POST}
 
-3.PUT /api/products/:id (Update) - Status 200
-PUT https://sba-13-productapi.vercel.app/api/products/{PRODUCT_ID}
+### 3. Update Product (200)
+PUT https://sba-13-productapi.vercel.app/api/products/{PASTE_ID_HERE}
 Content-Type: application/json
 
 {"price": 1099}
 
-4. DELETE /api/products/:id (Delete) - Status 200
-DELETE https://sba-13-productapi.vercel.app/api/products/{PRODUCT_ID}
 
-5.  GET /api/products (Advanced Querying) - All Features
-Basic: GET /api/products → Array of products
-Category: GET /api/products?category=electronics → Filtered
-Price range: GET /api/products?minPrice=500&maxPrice=1500 → Price filtered  
-Pagination: GET /api/products?page=1&limit=2 → 2 products max
+### 4. Delete Product (200)
+DELETE https://sba-13-productapi.vercel.app/api/products/{PASTE_ID_HERE}
 
 
+### 5. Advanced GET /api/products Querying
+GET /api/products → All products
+GET /api/products?category=electronics → Category filter
+GET /api/products?minPrice=500&maxPrice=1500 → Price range
+GET /api/products?page=1&limit=2 → Pagination
